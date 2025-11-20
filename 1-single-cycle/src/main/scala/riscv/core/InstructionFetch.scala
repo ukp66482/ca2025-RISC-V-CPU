@@ -62,13 +62,8 @@ class InstructionFetch extends Module {
   when(io.instruction_valid) {
     io.instruction := io.instruction_read_data
 
-    // TODO: Complete PC update logic
-    // Hint: Use multiplexer to select between jump target and sequential PC
-    // - Check jump flag condition
-    // - True case: Use jump target address
-    // - False case: Sequential execution
-    pc := ?
-
+    pc := Mux(io.jump_flag_id, io.jump_address_id, pc + 4.U(Parameters.AddrWidth))
+    
   }.otherwise {
     // When instruction is invalid, hold PC and insert NOP (ADDI x0, x0, 0)
     // NOP = 0x00000013 allows pipeline to continue safely without side effects
