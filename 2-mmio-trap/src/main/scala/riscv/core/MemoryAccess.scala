@@ -150,7 +150,7 @@ class MemoryAccess extends Module {
     }.elsewhen(io.funct3 === InstructionsTypeS.sh) {
       // TODO: Complete store halfword logic
       // Hint: Check address to determine lower/upper halfword position
-      when(mem_address_index(0) === 0.U) {
+      when(mem_address_index(1) === 0.U) {
         // Lower halfword (bytes 0-1)
         // TODO: Enable strobes for bytes 0 and 1, no shifting needed
         for (i <- 0 until Parameters.WordSize / 2) {
