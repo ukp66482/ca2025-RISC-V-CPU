@@ -11,7 +11,7 @@ import riscv.Parameters
 /**
  * VGA peripheral with MMIO framebuffer interface and dual-clock CDC
  *
- * Memory map (Base: 0x30000000):
+ * Memory map (Base: 0x20000000):
  *   0x00: ID          - Peripheral identification (RO: 0x56474131 = 'VGA1')
  *   0x04: CTRL        - Display enable, blank, swap request, frame select, interrupt enable
  *   0x08: STATUS      - Vblank status, safe to swap, upload busy, current frame
