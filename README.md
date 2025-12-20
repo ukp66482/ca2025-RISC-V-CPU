@@ -1,3 +1,6 @@
+## Hackmd Link
+Assignment3_hackmd: https://hackmd.io/@ukp66482/arch2025-homework3
+
 # RISC-V CPU Labs in Chisel
 
 > [!NOTE]
